@@ -1,11 +1,11 @@
 import Navbar from '../Components/Navbar/Navbar'
-
+import VideoPlayer from '../Components/VideoPlayer/videoPlayer'
 function Home() {
   return (
     <>
     <Navbar/>
-    <div className='bg-slate-600 min-h-screen' >
-        helllo
+    <div className='min-h-screen' >
+        <VideoPlayer/>
     </div>
     </>
   )
