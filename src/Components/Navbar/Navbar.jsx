@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate} from 'react-router-dom'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLink, setSelectedLink] = useState("#home");
+  const [selectedLink, setSelectedLink] = useState(location.pathname);
   const navigate=useNavigate()
 
   const toggleMenu = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const handleLinkClick = (link) => {
     setSelectedLink(link);
-    navigate(link); // Navigate to the specified link
+    navigate(link); 
   };
 
   return (
@@ -55,53 +55,48 @@ const Navbar = () => {
           )}
         </button>
       </div>
-      <div className="hidden md:flex flex-1 justify-center space-x-16 pb-4 ">
-        <a
-          href="#home"
-          className={`relative inline-block  py-2 hover:text-blue-700 ml-4 hover:italic ${
-            selectedLink === "#home" ? "text-red-700" : "text-white"
-          }`}
-          onClick={() => handleLinkClick("#home")}
-        >
-          Home
-        </a>
-        <a
-          href="#about"
-          className={`relative inline-block py-2 px-4 hover:text-red-700 hover:italic ${
-            selectedLink === "#about" ? "text-red-700" : "text-white"
-          }`}
-          onClick={() => handleLinkClick("#about")}
-        >
-          About
-        </a>
-        <a
-          href="#adfilms"
-          className={`relative inline-block py-2 px-4 hover:text-red-700 hover:italic ${
-            selectedLink === "#adfilms" ? "text-red-700" : "text-white"
-          }`}
-          onClick={() => handleLinkClick("#adfilms")}
-        >
-          Ad Films
-        </a>
-        <a
-          href="#behindthescenes"
-          className={`relative inline-block py-2 px-4 hover:text-red-700 hover:italic ${
-            selectedLink === "#behindthescenes" ? "text-red-700" : "text-white"
-          }`}
-          onClick={() => handleLinkClick("#behindthescenes")}
-        >
-          Behind The Scenes
-        </a>
-        <a
-          href="#contact"
-          className={`relative inline-block py-2 px-4 hover:text-red-700  hover:italic ${
-            selectedLink === "#contact" ? "text-red-700" : "text-white"
-          }`}
-          onClick={() => handleLinkClick("#contact")}
-        >
-          Contact
-        </a>
+      <div className="hidden md:flex flex-1 justify-center space-x-16 pb-4">
+      <div
+        className={`relative inline-block py-2 hover:text-red-700 ml-4 hover:italic ${
+          selectedLink === '/home' ? 'text-red-700' : 'text-white'
+        }`}
+        onClick={() => handleLinkClick('/home')}
+      >
+        Home
       </div>
+      <div
+        className={`relative inline-block py-2 px-4 hover:text-red-700 hover:italic ${
+          selectedLink === '/about' ? 'text-red-700' : 'text-white'
+        }`}
+        onClick={() => handleLinkClick('/about')}
+      >
+        About
+      </div>
+      <div
+        className={`relative inline-block py-2 px-4 hover:text-red-700 hover:italic ${
+          selectedLink === '/adfilms' ? 'text-red-700' : 'text-white'
+        }`}
+        onClick={() => handleLinkClick('/adfilms')}
+      >
+        Ad Films
+      </div>
+      <div
+        className={`relative inline-block py-2 px-4 hover:text-red-700 hover:italic ${
+          selectedLink === '/behindthescenes' ? 'text-red-700' : 'text-white'
+        }`}
+        onClick={() => handleLinkClick('/behindthescenes')}
+      >
+        Behind The Scenes
+      </div>
+      <div
+        className={`relative inline-block py-2 px-4 hover:text-red-700 hover:italic ${
+          selectedLink === '/contact' ? 'text-red-700' : 'text-white'
+        }`}
+        onClick={() => handleLinkClick('/contact')}
+      >
+        Contact
+      </div>
+    </div>
       {/* Dropdown menu for mobile */}
       <motion.div
         className={`md:hidden absolute top-16 right-0 text-white overflow-hidden z-20 ${

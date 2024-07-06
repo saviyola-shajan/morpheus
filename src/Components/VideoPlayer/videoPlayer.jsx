@@ -4,20 +4,7 @@ const videoPlayer = () => {
     const videos = [
         { id: 1, title: 'Video 1', url: 'https://youtu.be/DjjJ-xhPZF4?si=_uOv3QKS-4emcukF' },
         { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
-        { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
-        { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
-        { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
-        { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
-        { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
-        { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
-        { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
-        { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
-        { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
-        { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
-        { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
-        { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
-        { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
-        { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
+
 
     ]
   return (

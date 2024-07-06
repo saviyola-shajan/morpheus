@@ -1,7 +1,7 @@
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <div  className="pt-24 text-white">Contact</div>
   )
 }
 

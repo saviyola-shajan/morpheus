@@ -1,7 +1,7 @@
 
 function AdFilm() {
   return (
-    <div>AdFilm</div>
+    <div className="pt-24 text-white">AdFilm</div>
   )
 }
 

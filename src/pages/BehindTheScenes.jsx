@@ -1,7 +1,7 @@
 
 function BehindTheScenes() {
   return (
-    <div>BehindTheScenes</div>
+    <div  className="pt-24 text-white">BehindTheScenes</div>
   )
 }
 
