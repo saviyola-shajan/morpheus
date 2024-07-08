@@ -5,6 +5,7 @@ import About from './pages/About'
 import AdFilm from './pages/AdFilm'
 import BehindTheScenes from './pages/BehindTheScenes'
 import Contact from './pages/Contact'
+import Footer from './Components/Footer/Footer'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
         <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
+      <Footer/>
     </>
   )
 }

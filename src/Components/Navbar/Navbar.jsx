@@ -16,8 +16,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="text-white p-1 pt-8 flex items-center justify-between text-xl fixed top-0 w-full bg-black z-20 rounded-md">
-      <div className="text-xl font-bold ml-32 pb-4  hover:italic">
+    <nav className="text-white pt-6 flex items-center justify-between text-xl fixed top-0 w-full bg-black z-20 ">
+      <div className="text-xl font-bold ml-32 pb-4 cursor-pointer ">
+      <div className="absolute left-24 right-40 border-b-2 border-red-700 bottom-0"></div>
         Morpheus Ads
       </div>
       <div className="md:hidden">
@@ -57,7 +58,7 @@ const Navbar = () => {
       </div>
       <div className="hidden md:flex flex-1 justify-center space-x-16 pb-4">
       <div
-        className={`relative inline-block py-2 hover:text-red-700 ml-4 hover:italic ${
+        className={`relative inline-block py-2 hover:text-red-700 ml-4 cursor-pointer  ${
           selectedLink === '/home' ? 'text-red-700' : 'text-white'
         }`}
         onClick={() => handleLinkClick('/home')}
@@ -65,7 +66,7 @@ const Navbar = () => {
         Home
       </div>
       <div
-        className={`relative inline-block py-2 px-4 hover:text-red-700 hover:italic ${
+        className={`relative inline-block py-2 px-4 hover:text-red-700 cursor-pointer  ${
           selectedLink === '/about' ? 'text-red-700' : 'text-white'
         }`}
         onClick={() => handleLinkClick('/about')}
@@ -73,7 +74,7 @@ const Navbar = () => {
         About
       </div>
       <div
-        className={`relative inline-block py-2 px-4 hover:text-red-700 hover:italic ${
+        className={`relative inline-block py-2 px-4 hover:text-red-700 cursor-pointer  ${
           selectedLink === '/adfilms' ? 'text-red-700' : 'text-white'
         }`}
         onClick={() => handleLinkClick('/adfilms')}
@@ -81,7 +82,7 @@ const Navbar = () => {
         Ad Films
       </div>
       <div
-        className={`relative inline-block py-2 px-4 hover:text-red-700 hover:italic ${
+        className={`relative inline-block py-2 px-4 hover:text-red-700 cursor-pointer  ${
           selectedLink === '/behindthescenes' ? 'text-red-700' : 'text-white'
         }`}
         onClick={() => handleLinkClick('/behindthescenes')}
@@ -89,7 +90,7 @@ const Navbar = () => {
         Behind The Scenes
       </div>
       <div
-        className={`relative inline-block py-2 px-4 hover:text-red-700 hover:italic ${
+        className={`relative inline-block py-2 px-4 hover:text-red-700 cursor-pointer  ${
           selectedLink === '/contact' ? 'text-red-700' : 'text-white'
         }`}
         onClick={() => handleLinkClick('/contact')}
@@ -108,29 +109,44 @@ const Navbar = () => {
       >
         <ul className="flex flex-col items-center w-48 pb-10 bg-black">
           <li className="py-3 pt-10 pb-10 pr-12">
-            <a href="#home" className="hover:text-red-700">
+            <div className={`hover:text-red-700 cursor-pointer  ${
+              selectedLink === '/home' ? 'text-red-700':'text-white'}`
+            }
+            onClick={()=>handleLinkClick('/home')}>
               Home
-            </a>
+            </div>
           </li>
           <li className="py-3 pt-10 pb-10 pr-12">
-            <a href="#about" className="hover:text-red-700">
+            <div className={ `hover:text-red-700 cursor-pointer  ${
+              selectedLink === '/about'? 'text-red-700':'text-white'}`}
+              onClick={()=>handleLinkClick('/about')}
+          >
               About
-            </a>
+            </div>
           </li>
           <li className="py-3 pt-10 pb-10 pr-12">
-            <a href="#services" className="hover:text-red-700">
+            <div className={`hover:text-red-700 cursor-pointer ${
+              selectedLink === '/adfilm'?'text-red-700':'text-white'}`
+            }
+            onClick={()=>handleLinkClick('/adfilm')}>
               Ad films
-            </a>
+            </div>
           </li>
           <li className="py-3 pt-10 pb-10">
-            <a href="#portfolio" className="hover:text-red-700">
+            <div className={`hover:text-red-700 cursor-pointer ${
+              selectedLink === '/behindthesenes'?'text-red-700':'text-white'}`
+            }
+            onClick={()=>handleLinkClick('/behindthescenes')}>
               Behind The Scenes
-            </a>
+            </div>
           </li>
           <li className="py-3 pt-10 pb-10 pr-12">
-            <a href="#contact" className="hover:text-red-700">
+            <div className={`hover:text-red-700 cursor-pointer ${
+              selectedLink === '/contact'?'text-red-700':'text-white'}`
+            }
+            onClick={()=>handleLinkClick('/contact')}>
               Contact
-            </a>
+            </div>
           </li>
         </ul>
       </motion.div>
