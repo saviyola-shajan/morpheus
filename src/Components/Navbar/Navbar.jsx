@@ -1,24 +1,25 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { useNavigate} from 'react-router-dom'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLink, setSelectedLink] = useState(location.pathname);
-  const navigate=useNavigate()
+  const [selectedLink, setSelectedLink] = useState('/home');
+  const navigate = useNavigate();
+
+  const handleLinkClick = (path) => {
+    setSelectedLink(path);
+    navigate(path);
+  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleLinkClick = (link) => {
-    setSelectedLink(link);
-    navigate(link); 
-  };
-
   return (
     <nav className="text-white pt-6 flex items-center justify-between text-xl fixed top-0 w-full bg-black z-20 ">
-      <div className="text-xl font-bold ml-32 pb-4 cursor-pointer ">
-      <div className="absolute left-24 right-40 border-b-2 border-red-700 bottom-0"></div>
+      <div className="text-xl font-bold ml-32 pb-4 cursor-pointer">
+        <div className="absolute left-24 right-40 border-b-2 border-red-600 bottom-0"></div>
         Morpheus Ads
       </div>
       <div className="md:hidden">
@@ -57,98 +58,40 @@ const Navbar = () => {
         </button>
       </div>
       <div className="hidden md:flex flex-1 justify-center space-x-16 pb-4">
-      <div
-        className={`relative inline-block py-2 hover:text-red-700 ml-4 cursor-pointer  ${
-          selectedLink === '/home' ? 'text-red-700' : 'text-white'
-        }`}
-        onClick={() => handleLinkClick('/home')}
-      >
-        Home
+        {['/home', '/about', '/adfilms', '/behindthescenes', '/contact'].map((path) => (
+          <div
+            key={path}
+            className={`relative inline-block py-2 px-4 hover:text-red-600 cursor-pointer ${
+              selectedLink === path ? 'text-red-600' : 'text-white'
+            }`}
+            onClick={() => handleLinkClick(path)}
+          >
+            {path.substring(1).charAt(0).toUpperCase() + path.substring(2)}
+          </div>
+        ))}
       </div>
-      <div
-        className={`relative inline-block py-2 px-4 hover:text-red-700 cursor-pointer  ${
-          selectedLink === '/about' ? 'text-red-700' : 'text-white'
-        }`}
-        onClick={() => handleLinkClick('/about')}
-      >
-        About
-      </div>
-      <div
-        className={`relative inline-block py-2 px-4 hover:text-red-700 cursor-pointer  ${
-          selectedLink === '/adfilms' ? 'text-red-700' : 'text-white'
-        }`}
-        onClick={() => handleLinkClick('/adfilms')}
-      >
-        Ad Films
-      </div>
-      <div
-        className={`relative inline-block py-2 px-4 hover:text-red-700 cursor-pointer  ${
-          selectedLink === '/behindthescenes' ? 'text-red-700' : 'text-white'
-        }`}
-        onClick={() => handleLinkClick('/behindthescenes')}
-      >
-        Behind The Scenes
-      </div>
-      <div
-        className={`relative inline-block py-2 px-4 hover:text-red-700 cursor-pointer  ${
-          selectedLink === '/contact' ? 'text-red-700' : 'text-white'
-        }`}
-        onClick={() => handleLinkClick('/contact')}
-      >
-        Contact
-      </div>
-    </div>
-      {/* Dropdown menu for mobile */}
       <motion.div
         className={`md:hidden absolute top-16 right-0 text-white overflow-hidden z-20 ${
-          isOpen ? "block" : "hidden"
+          isOpen ? 'block' : 'hidden'
         }`}
         initial={{ height: 0 }}
-        animate={{ height: isOpen ? "auto" : 0 }}
+        animate={{ height: isOpen ? 'auto' : 0 }}
         transition={{ duration: 0.3 }}
       >
         <ul className="flex flex-col items-center w-48 pb-10 bg-black">
-          <li className="py-3 pt-10 pb-10 pr-12">
-            <div className={`hover:text-red-700 cursor-pointer  ${
-              selectedLink === '/home' ? 'text-red-700':'text-white'}`
-            }
-            onClick={()=>handleLinkClick('/home')}>
-              Home
-            </div>
-          </li>
-          <li className="py-3 pt-10 pb-10 pr-12">
-            <div className={ `hover:text-red-700 cursor-pointer  ${
-              selectedLink === '/about'? 'text-red-700':'text-white'}`}
-              onClick={()=>handleLinkClick('/about')}
-          >
-              About
-            </div>
-          </li>
-          <li className="py-3 pt-10 pb-10 pr-12">
-            <div className={`hover:text-red-700 cursor-pointer ${
-              selectedLink === '/adfilm'?'text-red-700':'text-white'}`
-            }
-            onClick={()=>handleLinkClick('/adfilm')}>
-              Ad films
-            </div>
-          </li>
-          <li className="py-3 pt-10 pb-10">
-            <div className={`hover:text-red-700 cursor-pointer ${
-              selectedLink === '/behindthesenes'?'text-red-700':'text-white'}`
-            }
-            onClick={()=>handleLinkClick('/behindthescenes')}>
-              Behind The Scenes
-            </div>
-          </li>
-          <li className="py-3 pt-10 pb-10 pr-12">
-            <div className={`hover:text-red-700 cursor-pointer ${
-              selectedLink === '/contact'?'text-red-700':'text-white'}`
-            }
-            onClick={()=>handleLinkClick('/contact')}>
-              Contact
-            </div>
-          </li>
-        </ul>
+          {['/home', '/about', '/adfilms', '/behindthescenes', '/contact'].map((path) => (
+            <li key={path} className="py-3 pt-10 pb-10 pr-12">
+              <div
+                className={`hover:text-red-600 cursor-pointer ${
+                  selectedLink === path ? 'text-red-600' : 'text-white'
+                }`}
+                onClick={() => handleLinkClick(path)}
+              >
+                {path.substring(1).charAt(0).toUpperCase() + path.substring(2)}
+              </div>
+            </li>
+          ))}
+        </ul> 
       </motion.div>
     </nav>
   );

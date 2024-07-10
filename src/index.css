@@ -4,8 +4,9 @@
 @tailwind utilities;
 @layer base{
     html {
-      @apply font-serif;
-      font-weight: 500;
+      @apply font-sans;
+      font-weight: 400;
+      font-style:normal;
     }
   }
   

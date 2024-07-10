@@ -1,15 +1,15 @@
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-4 border-t-2 border-red-700">
+    <footer className="bg-black text-white py-4 border-t-2 border-red-600">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Navigation Links */}
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 align-middle  justify-center font-serif pl-28">
-            All  Rights  Reserved | Copyright  Morpheus  Ads | 2024
+          <div className="text-center md:text-left flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 font-serif md:pl-28">
+            <span>All Rights Reserved | Copyright Morpheus Ads | 2024</span>
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex space-x-6 pr-52">
+          <div className="flex space-x-6 justify-center md:justify-end md:pr-52">
             <div>
               <a href="https://facebook.com">
                 <svg
@@ -29,7 +29,7 @@ const Footer = () => {
                   viewBox="0 0 448 512"
                 >
                   <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z" />
-                </svg>{" "}
+                </svg>
               </a>
             </div>
             <div>
@@ -51,7 +51,7 @@ const Footer = () => {
                   viewBox="0 0 448 512"
                 >
                   <path d="M282 256.2l-95.2-54.1V310.3L282 256.2zM384 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm14.4 136.1c7.6 28.6 7.6 88.2 7.6 88.2s0 59.6-7.6 88.1c-4.2 15.8-16.5 27.7-32.2 31.9C337.9 384 224 384 224 384s-113.9 0-142.2-7.6c-15.7-4.2-28-16.1-32.2-31.9C42 315.9 42 256.3 42 256.3s0-59.7 7.6-88.2c4.2-15.8 16.5-28.2 32.2-32.4C110.1 128 224 128 224 128s113.9 0 142.2 7.7c15.7 4.2 28 16.6 32.2 32.4z" />
-                </svg>{" "}
+                </svg>
               </a>
             </div>
           </div>
