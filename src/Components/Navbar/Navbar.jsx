@@ -1,15 +1,20 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLink, setSelectedLink] = useState('/home');
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    setSelectedLink(location.pathname);
+  }, [location]);
 
   const handleLinkClick = (path) => {
-    setSelectedLink(path);
     navigate(path);
+    setIsOpen(false);
   };
 
   const toggleMenu = () => {
@@ -17,13 +22,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="text-white pt-6 flex items-center justify-between text-xl fixed top-0 w-full bg-black z-20 ">
+    <nav className="text-white pt-6 flex items-center justify-between text-xl fixed top-0 w-full bg-black z-20">
       <div className="text-xl font-bold ml-32 pb-4 cursor-pointer">
         <div className="absolute left-24 right-40 border-b-2 border-red-600 bottom-0"></div>
         Morpheus Ads
       </div>
-      <div className="md:hidden">
-        <button className="text-white" onClick={toggleMenu}>
+      <div className="md:hidden mr-8">
+        <button className="text-red-600 z-30" onClick={toggleMenu}>
           {isOpen ? (
             <svg
               className="w-6 h-6"
@@ -78,9 +83,9 @@ const Navbar = () => {
         animate={{ height: isOpen ? 'auto' : 0 }}
         transition={{ duration: 0.3 }}
       >
-        <ul className="flex flex-col items-center w-48 pb-10 bg-black">
+        <ul className="flex flex-col items-center w-48 pb-10 bg-transparent">
           {['/home', '/about', '/adfilms', '/behindthescenes', '/contact'].map((path) => (
-            <li key={path} className="py-3 pt-10 pb-10 pr-12">
+            <li key={path} className="py-3">
               <div
                 className={`hover:text-red-600 cursor-pointer ${
                   selectedLink === path ? 'text-red-600' : 'text-white'
@@ -91,7 +96,7 @@ const Navbar = () => {
               </div>
             </li>
           ))}
-        </ul> 
+        </ul>
       </motion.div>
     </nav>
   );

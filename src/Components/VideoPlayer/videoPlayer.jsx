@@ -4,6 +4,15 @@ const videoPlayer = () => {
     const videos = [
         { id: 1, title: 'Video 1', url: 'https://youtu.be/DjjJ-xhPZF4?si=_uOv3QKS-4emcukF' },
         { id: 2, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
+        { id: 3, title: 'Video 1', url: 'https://youtu.be/DjjJ-xhPZF4?si=_uOv3QKS-4emcukF' },
+        { id: 4, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
+        { id: 5, title: 'Video 1', url: 'https://youtu.be/DjjJ-xhPZF4?si=_uOv3QKS-4emcukF' },
+        { id: 6, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
+        { id: 7, title: 'Video 1', url: 'https://youtu.be/DjjJ-xhPZF4?si=_uOv3QKS-4emcukF' },
+        { id: 8, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' },
+        { id: 9, title: 'Video 1', url: 'https://youtu.be/DjjJ-xhPZF4?si=_uOv3QKS-4emcukF' },
+        { id: 10, title: 'Video 2', url: 'https://youtu.be/9HzQgsfHl4c?si=cyM55mnFaWzIVeDj' }
+
 
 
     ]

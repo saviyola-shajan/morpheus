@@ -10,6 +10,7 @@ const validationSchema = Yup.object({
     .required("Required")
     .matches(/^[0-9]{10}$/, "Phone number must be 10 digits"),
 });
+
 const onSubmit = (values) => {
   console.log(values);
 };
@@ -19,13 +20,12 @@ function Contact() {
 
   return (
     <div className="pt-20 flex items-center justify-center">
-      <div className=" text-white border-2 border-red-600 rounded-md my-12 mr-52 ml-36 flex">
-        <div className="w-2/4 p-8 pl-20">
-          <div className="text-4xl pl-16 pt-10 ">HELLO....!</div>
+      <div className="text-white border-2 border-red-600 rounded-md my-12 mx-6 lg:mx-36 flex flex-col lg:flex-row">
+        <div className="w-full lg:w-2/4 p-8 lg:pl-20">
+          <div className="text-2xl lg:text-4xl lg:pl-16 lg:pt-10">HELLO....!</div>
           <br />
-          <div className="text-xl">
-            Lets &apos; Do Something Togeather ? Get inTouch For Questions,
-            Budgets and More.... Leave Your Message Here......!
+          <div className="text-lg lg:text-xl">
+            Lets &apos; Do Something Together? Get in Touch For Questions, Budgets and More.... Leave Your Message Here......!
             <br />
             <br />
             <br />
@@ -52,7 +52,7 @@ function Contact() {
               <div>
                 <div className="flex items-center">
                   <svg
-                    className="w-8 h-8  "
+                    className="w-8 h-8"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
                   >
@@ -69,8 +69,7 @@ function Contact() {
                       +91 9995546077
                     </a>
                     <a
-                      href="tel:+917994454499
-"
+                      href="tel:+917994454499"
                       className="block text-white font-medium hover:text-red-600 hover:underline"
                     >
                       +91 7994454499
@@ -97,27 +96,26 @@ function Contact() {
                 href="https://maps.app.goo.gl/BuFcnS3Z5uH7dWsy6"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="ml-4 hover:text-red-600"
               >
-                <div className="ml-4 hover:text-red-600">
-                  <div className="mt-2">karayamapebil building</div>
-                  <div>mukkathikal street lane - 4</div>
-                  <div>MG road</div>
-                  <div>chembumukku, kakkand</div>
-                  <div>Kochi, Kerala 680314</div>
-                </div>
+                <div className="mt-2">karayamapebil building</div>
+                <div>mukkathikal street lane - 4</div>
+                <div>MG road</div>
+                <div>chembumukku, kakkand</div>
+                <div>Kochi, Kerala 680314</div>
               </a>
             </div>
           </div>
         </div>
-        <div className="relative w-3/4 p-6 top-3 bottom-3">
-          <div className="pt-8 top-0 bottom-0 left-0 border-l-2 border-red-600 ">
+        <div className="relative w-full lg:w-3/4 p-6">
+          <div className="pt-8 border-t-2 lg:border-l-2 lg:border-t-0 border-red-600 ">
             <div>
               <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}
                 onSubmit={onSubmit}
               >
-                <Form className="max-w-lg mx-auto p-6 mb-12  border-2 border-red-600 shadow-md rounded">
+                <Form className="max-w-lg mx-auto p-6 mb-12 border-2 border-red-600 shadow-md rounded">
                   <div className="mb-4">
                     <label
                       htmlFor="name"
@@ -130,7 +128,7 @@ function Contact() {
                       id="name"
                       name="name"
                       placeholder="Name"
-                      className="bg-transparent border-red-600 w-full p-2 border rounded-md focus:outline-none focus:border-red-600  focus:rounded-md"
+                      className="bg-transparent border-red-600 w-full p-2 border rounded-md focus:outline-none focus:border-red-600"
                     />
                     <ErrorMessage
                       name="name"
@@ -150,7 +148,7 @@ function Contact() {
                       id="email"
                       name="email"
                       placeholder="Email"
-                      className="bg-transparent border-red-600 w-full p-2 border rounded-md focus:outline-none focus:border-red-600  focus:rounded-md"
+                      className="bg-transparent border-red-600 w-full p-2 border rounded-md focus:outline-none focus:border-red-600"
                     />
                     <ErrorMessage
                       name="email"
@@ -170,7 +168,7 @@ function Contact() {
                       id="phone"
                       name="phone"
                       placeholder="Phone Number"
-                      className="bg-transparent border-red-600 w-full p-2 border rounded-md focus:outline-none focus:border-red-600  focus:rounded-md"
+                      className="bg-transparent border-red-600 w-full p-2 border rounded-md focus:outline-none focus:border-red-600"
                     />
                     <ErrorMessage
                       name="phone"
@@ -190,7 +188,7 @@ function Contact() {
                       id="message"
                       name="message"
                       placeholder="Message"
-                      className="bg-transparent border-red-600 w-full p-2 border rounded-md focus:outline-none focus:border-red-600  focus:rounded-md"
+                      className="bg-transparent border-red-600 w-full p-2 border rounded-md focus:outline-none focus:border-red-600"
                       rows="4"
                     />
                     <ErrorMessage
@@ -211,7 +209,6 @@ function Contact() {
           </div>
         </div>
       </div>
-      ;
     </div>
   );
 }
