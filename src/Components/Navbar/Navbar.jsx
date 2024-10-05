@@ -23,7 +23,10 @@ const Navbar = () => {
 
   return (
     <nav className="text-white pt-6 flex items-center justify-between text-xl fixed top-0 w-full bg-black z-20">
-      <div className="text-xl font-bold ml-32 pb-4 cursor-pointer">
+    <div
+        className="text-xl font-bold ml-32 pb-4 cursor-pointer"
+        onClick={() => handleLinkClick('/home')}
+      >
         <div className="absolute left-24 right-40 border-b-2 border-red-600 bottom-0"></div>
         Morpheus Ads
       </div>

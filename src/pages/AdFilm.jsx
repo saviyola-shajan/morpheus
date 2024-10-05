@@ -1,7 +1,8 @@
+import VideoPlayer from "../Components/VideoPlayer/videoPlayer"
 
 function AdFilm() {
   return (
-    <div className="pt-24 text-white">AdFilm</div>
+   <div><VideoPlayer/></div>
   )
 }
 

@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Social Media Icons */}
           <div className="flex space-x-6 justify-center md:justify-end md:pr-52">
             <div>
-              <a href="https://facebook.com">
+              <a href="https://facebook.com"  target="_blank" rel="noopener noreferrer">
                 <svg
                   className="w-8 h-8 bg-white rounded-md"
                   xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@ const Footer = () => {
               </a>
             </div>
             <div>
-              <a href="https://twitter.com">
+              <a href="https://twitter.com"  target="_blank" rel="noopener noreferrer">
                 <svg
                   className="w-8 h-8 bg-white rounded-md"
                   xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ const Footer = () => {
               </a>
             </div>
             <div>
-              <a href="https://www.instagram.com/morpheusads?igsh=bHRkM25jYzdwcDBj">
+              <a href="https://www.instagram.com/morpheusads?igsh=bHRkM25jYzdwcDBj"  target="_blank" rel="noopener noreferrer">
                 <svg
                   className="w-8 h-8 bg-white rounded-md"
                   xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ const Footer = () => {
               </a>
             </div>
             <div>
-              <a href="https://youtube.com/@murphymorpheus8977?si=n1OLHwl_iE3Tgf26">
+              <a href="https://youtube.com/@murphymorpheus8977?si=n1OLHwl_iE3Tgf26"  target="_blank" rel="noopener noreferrer">
                 <svg
                   className="w-8 h-8 bg-white rounded-md"
                   xmlns="http://www.w3.org/2000/svg"

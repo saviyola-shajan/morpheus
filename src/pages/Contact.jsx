@@ -1,28 +1,13 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
+import Email from '../Components/Email/Email'
 
-const validationSchema = Yup.object({
-  name: Yup.string()
-    .required("Required")
-    .min(2, "Name must be at least 2 characters long"),
-  email: Yup.string().email("Invalid email address").required("Required"),
-  phone: Yup.string()
-    .required("Required")
-    .matches(/^[0-9]{10}$/, "Phone number must be 10 digits"),
-});
-
-const onSubmit = (values) => {
-  console.log(values);
-};
 
 function Contact() {
-  const initialValues = { name: "", email: "", phone: "", message: "" };
 
   return (
     <div className="pt-20 flex items-center justify-center">
       <div className="text-white border-2 border-red-600 rounded-md my-12 mx-6 lg:mx-36 flex flex-col lg:flex-row">
         <div className="w-full lg:w-2/4 p-8 lg:pl-20">
-          <div className="text-2xl lg:text-4xl lg:pl-16 lg:pt-10">HELLO....!</div>
+          <div className="text-2xl lg:text-4xl lg:pl-16 lg:pt-10">Heyy....!</div>
           <br />
           <div className="text-lg lg:text-xl">
             Lets &apos; Do Something Together? Get in Touch For Questions, Budgets and More.... Leave Your Message Here......!
@@ -44,7 +29,7 @@ function Contact() {
                 href="mailto:murphymorpheus.in@gmail.com"
                 className="text-white font-medium hover:text-red-600"
               >
-                murphymorpheus.in@gmail.com
+                info@morpheusads.com
               </a>
             </div>
             <br />
@@ -107,107 +92,7 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div className="relative w-full lg:w-3/4 p-6">
-          <div className="pt-8 border-t-2 lg:border-l-2 lg:border-t-0 border-red-600 ">
-            <div>
-              <Formik
-                initialValues={initialValues}
-                validationSchema={validationSchema}
-                onSubmit={onSubmit}
-              >
-                <Form className="max-w-lg mx-auto p-6 mb-12 border-2 border-red-600 shadow-md rounded">
-                  <div className="mb-4">
-                    <label
-                      htmlFor="name"
-                      className="block text-white font-bold mb-2"
-                    >
-                      Name <span className="text-red-600">*</span>
-                    </label>
-                    <Field
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Name"
-                      className="bg-transparent border-red-600 w-full p-2 border rounded-md focus:outline-none focus:border-red-600"
-                    />
-                    <ErrorMessage
-                      name="name"
-                      component="div"
-                      className="text-red-500"
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <label
-                      htmlFor="email"
-                      className="block text-white font-bold mb-2"
-                    >
-                      Email <span className="text-red-600">*</span>
-                    </label>
-                    <Field
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="Email"
-                      className="bg-transparent border-red-600 w-full p-2 border rounded-md focus:outline-none focus:border-red-600"
-                    />
-                    <ErrorMessage
-                      name="email"
-                      component="div"
-                      className="text-red-500"
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <label
-                      htmlFor="phone"
-                      className="block text-white font-bold mb-2"
-                    >
-                      Phone Number <span className="text-red-600">*</span>
-                    </label>
-                    <Field
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      placeholder="Phone Number"
-                      className="bg-transparent border-red-600 w-full p-2 border rounded-md focus:outline-none focus:border-red-600"
-                    />
-                    <ErrorMessage
-                      name="phone"
-                      component="div"
-                      className="text-red-500"
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <label
-                      htmlFor="message"
-                      className="block text-white font-bold mb-2"
-                    >
-                      Message
-                    </label>
-                    <Field
-                      as="textarea"
-                      id="message"
-                      name="message"
-                      placeholder="Message"
-                      className="bg-transparent border-red-600 w-full p-2 border rounded-md focus:outline-none focus:border-red-600"
-                      rows="4"
-                    />
-                    <ErrorMessage
-                      name="message"
-                      component="div"
-                      className="text-red-500"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-red-600 text-white p-2 rounded text-lg font-semibold"
-                  >
-                    Submit
-                  </button>
-                </Form>
-              </Formik>
-            </div>
-          </div>
-        </div>
+      <Email/>
       </div>
     </div>
   );
