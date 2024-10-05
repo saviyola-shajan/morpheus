@@ -7,6 +7,7 @@ const Navbar = () => {
   const [selectedLink, setSelectedLink] = useState('/home');
   const navigate = useNavigate();
   const location = useLocation();
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     setSelectedLink(location.pathname);
@@ -26,8 +27,11 @@ const Navbar = () => {
     <div
         className="text-xl font-bold ml-32 pb-4 cursor-pointer"
         onClick={() => handleLinkClick('/home')}
+        style={{color: isHovered?"#F0E5CF":"#F39C12"}}
+        onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="absolute left-24 right-40 border-b-2 border-red-600 bottom-0"></div>
+        <div className="absolute left-24 right-40 border-b-2 border-red-600 bottom-0" ></div>
         Morpheus Ads
       </div>
       <div className="md:hidden mr-8">

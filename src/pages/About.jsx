@@ -12,7 +12,7 @@ function About() {
         <div className="w-full lg:w-1/2 lg:mr-10 mt-16 lg:mt-0 px-6 lg:px-24 font-medium font-sans mb-12">
           <div className="font-semibold text-4xl lg:text-6xl mt-8">
             Hi...{" "}
-            <span className="font-normal text-2xl lg:text-3xl hover:text-red-600">
+            <span className="font-normal text-2xl lg:text-3xl hover:text-red-600" >
               I&apos;m
             </span>
           </div>
@@ -20,7 +20,7 @@ function About() {
           <div className="font-medium text-xl lg:text-2xl text-red-600">
             Murphy Devasy
           </div>
-          <div className="font-normal text-lg lg:text-xl text-red-600">
+          <div className="font-normal text-lg lg:text-xl" style={{ color: '#F39C12' }}>
             -Director
           </div>
           <br />

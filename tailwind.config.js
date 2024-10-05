@@ -5,9 +5,10 @@ export default {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-//     colors:{
-// customColours:'#ce6a6c'
-//     },
+    // colors:{
+    //   warmGold: '#F39C12',
+    //   softBeige: '#F0E5CF',
+    // },
     extend: {},
   },
   plugins: [],

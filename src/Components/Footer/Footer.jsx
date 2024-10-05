@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Social Media Icons */}
           <div className="flex space-x-6 justify-center md:justify-end md:pr-52">
             <div>
-              <a href="https://facebook.com"  target="_blank" rel="noopener noreferrer">
+              <a href="">
                 <svg
                   className="w-8 h-8 bg-white rounded-md"
                   xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@ const Footer = () => {
               </a>
             </div>
             <div>
-              <a href="https://twitter.com"  target="_blank" rel="noopener noreferrer">
+              <a href="">
                 <svg
                   className="w-8 h-8 bg-white rounded-md"
                   xmlns="http://www.w3.org/2000/svg"

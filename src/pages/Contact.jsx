@@ -7,11 +7,10 @@ function Contact() {
     <div className="pt-20 flex items-center justify-center">
       <div className="text-white border-2 border-red-600 rounded-md my-12 mx-6 lg:mx-36 flex flex-col lg:flex-row">
         <div className="w-full lg:w-2/4 p-8 lg:pl-20">
-          <div className="text-2xl lg:text-4xl lg:pl-16 lg:pt-10">Heyy....!</div>
+          <div className="text-2xl lg:text-4xl lg:pl-16 lg:pt-10" style={{ color: '#F39C12' }}>Heyy....!</div>
           <br />
           <div className="text-lg lg:text-xl">
-            Lets &apos; Do Something Together? Get in Touch For Questions, Budgets and More.... Leave Your Message Here......!
-            <br />
+            Lets &apos; Do Something Together..! Get in touch for questions, quotes, and more.<br></br> Leave us a message here....!
             <br />
             <br />
             <div className="max-w-lg mx-auto mt-8 flex items-center space-x-4">
