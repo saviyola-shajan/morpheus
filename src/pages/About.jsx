@@ -4,7 +4,7 @@ function About() {
       <div className="pt-24 flex flex-col lg:flex-row justify-between">
         <div className="w-full lg:w-1/2 h-54 flex justify-center mr-2 items-center ml-16 px-6 m-10 ">
           <img
-            src="../../public/DSC08338.JPG"
+            src="../../public/images/DSC08338.JPG"
             alt="portrait"
             className="w-full h-auto rounded-xl"
           />
@@ -60,7 +60,7 @@ function About() {
           <div className="group relative mb-4 w-full sm:w-1/2 lg:w-1/4 p-2">
             <img
               className="w-full h-full  rounded-lg"
-              src="../../public/images/_ASH4477.JPG"
+              src="/images/_ASH4477.JPG"
               alt="Image 1"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex justify-center items-center">
@@ -70,7 +70,7 @@ function About() {
           <div className="group relative mb-4 w-full sm:w-1/2 lg:w-1/4 p-2">
             <img
               className="w-full h-auto  rounded-lg"
-              src="../../public/images/_DSC1164.JPG"
+              src="/images/_DSC1164.JPG"
               alt="Image 2"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex justify-center items-center">
@@ -80,7 +80,7 @@ function About() {
           <div className="group relative mb-4 w-full sm:w-1/2 lg:w-1/4 p-2">
             <img
               className="w-full h-auto  rounded-lg"
-              src="../../public/images/_RL_0796.JPG"
+              src="/images/_RL_0796.JPG"
               alt="Image 3"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex justify-center items-center">
@@ -90,7 +90,7 @@ function About() {
           <div className="group relative mb-4 w-full sm:w-1/2 lg:w-1/4 p-2">
             <img
               className="w-full h-auto  rounded-lg"
-              src="../../public/images/_ASH7760.JPG"
+              src="/images/_ASH7760.JPG"
               alt="Image 4"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex justify-center items-center">
@@ -105,57 +105,3 @@ function About() {
 
 export default About;
 
-
-// function About() {
-//   return (
-//     <div className="relative w-full h-screen text-white">
-//       <img
-//         src="/_RL_9939.JPG"
-//         alt="portrait"
-//         className="object-cover w-full h-full"
-//       />
-//       <div className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-black bg-opacity-50">
-//         <div className="text-center">
-//           <div className="font-semibold text-6xl mb-4">
-//             Hi...{" "}
-//             <span className="font-normal text-3xl hover:text-red-600">
-//               I&apos;m
-//             </span>
-//           </div>
-//           <div className="font-medium text-2xl text-red-600 mb-2">
-//             Murphy Devasy
-//           </div>
-//           <div className="font-normal text-xl text-red-600 mb-8">-Director</div>
-//           <div className="font-medium text-xl tracking-wider">
-//             Director of the critically acclaimed Malayalam film Nalla Nilavulla
-//             Rathri, produced by Sandra Thomas Productions. This film has
-//             garnered significant recognition, with its song and trailer
-//             surpassing 3.5 million views on YouTube. Upon its release on Amazon,
-//             it quickly entered the top 10 in India.
-//             <br />
-//             After earning a degree in Visual Communication from Hindustan
-//             College, Chennai, in 2007, I accumulated seven years of experience
-//             working with Malayalam channels, Star Sports, and various programs
-//             for CNBC channels. This period honed my skills and laid a solid
-//             foundation for my career in visual storytelling.
-//             <br />
-//             For the past 12 years, I have dedicated myself to the advertising
-//             field, progressing from Associate Director to Director at a renowned
-//             ad film production house. My extensive experience has led to the
-//             establishment of Morpheus Ads, where our focus is on creating
-//             top-quality advertisements.
-//             <br />
-//             At Morpheus Ads, we are a collective of young, creative minds with
-//             substantial experience in both the film and ad film industries. Our
-//             recent projects have not only met but exceeded client expectations,
-//             bringing big smiles to their faces. We pride ourselves on our
-//             innovative approach and our commitment to excellence in every
-//             project we undertake.
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default About;
