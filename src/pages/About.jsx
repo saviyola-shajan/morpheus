@@ -2,9 +2,9 @@ function About() {
   return (
     <div className="bg text-white">
       <div className="pt-24 flex flex-col lg:flex-row justify-between">
-        <div className="w-full lg:w-1/2 h-96 flex justify-center mr-2 items-center ml-16 px-6 m-10 lg:mt-48">
+        <div className="w-full lg:w-1/2 h-54 flex justify-center mr-2 items-center ml-16 px-6 m-10 ">
           <img
-            src="/_RL_9939.JPG"
+            src="../../public/DSC08338.JPG"
             alt="portrait"
             className="w-full h-auto rounded-xl"
           />
@@ -59,8 +59,8 @@ function About() {
         <div className="w-full max-w-screen-xl flex flex-wrap justify-center items-center mb-12 mt-12">
           <div className="group relative mb-4 w-full sm:w-1/2 lg:w-1/4 p-2">
             <img
-              className="w-full h-auto transition duration-300 transform group-hover:scale-110 rounded-lg"
-              src="/3D-logo.jpg"
+              className="w-full h-full  rounded-lg"
+              src="../../public/images/_ASH4477.JPG"
               alt="Image 1"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex justify-center items-center">
@@ -69,8 +69,8 @@ function About() {
           </div>
           <div className="group relative mb-4 w-full sm:w-1/2 lg:w-1/4 p-2">
             <img
-              className="w-full h-auto transition duration-300 transform group-hover:scale-110 rounded-lg"
-              src="/3D-logo.jpg"
+              className="w-full h-auto  rounded-lg"
+              src="../../public/images/_DSC1164.JPG"
               alt="Image 2"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex justify-center items-center">
@@ -79,8 +79,8 @@ function About() {
           </div>
           <div className="group relative mb-4 w-full sm:w-1/2 lg:w-1/4 p-2">
             <img
-              className="w-full h-auto transition duration-300 transform group-hover:scale-110 rounded-lg"
-              src="/3D-logo.jpg"
+              className="w-full h-auto  rounded-lg"
+              src="../../public/images/_RL_0796.JPG"
               alt="Image 3"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex justify-center items-center">
@@ -89,8 +89,8 @@ function About() {
           </div>
           <div className="group relative mb-4 w-full sm:w-1/2 lg:w-1/4 p-2">
             <img
-              className="w-full h-auto transition duration-300 transform group-hover:scale-110 rounded-lg"
-              src="/3D-logo.jpg"
+              className="w-full h-auto  rounded-lg"
+              src="../../public/images/_ASH7760.JPG"
               alt="Image 4"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex justify-center items-center">

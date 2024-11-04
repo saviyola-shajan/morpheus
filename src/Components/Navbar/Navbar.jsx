@@ -27,7 +27,7 @@ const Navbar = () => {
     <div
         className="text-xl font-bold ml-32 pb-4 cursor-pointer"
         onClick={() => handleLinkClick('/home')}
-        style={{color: isHovered?"#F0E5CF":"#F39C12"}}
+        style={{color: isHovered?"#F39C12":"#F0E5CF"}}
         onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       >
