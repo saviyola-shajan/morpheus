@@ -4,7 +4,7 @@ function About() {
       <div className="pt-24 flex flex-col lg:flex-row justify-between">
         <div className="w-full lg:w-1/2 h-54 flex justify-center mr-2 items-center ml-16 px-6 m-10 ">
           <img
-            src="/images/DSC08338.JPG"
+            src="/DSC08338.JPG"
             alt="portrait"
             className="w-full h-auto rounded-xl"
           />
