@@ -27,7 +27,7 @@ function AdFilm() {
       </div>
 
       {/* Video Player */}
-      <div className="flex justify-center lg:justify-start">
+      <div className="flex justify-center">
         <VideoPlayer className="w-full lg:w-3/4" />
       </div>
     </div>
