@@ -5,11 +5,11 @@ export default {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    // colors:{
-    //   warmGold: '#F39C12',
-    //   softBeige: '#F0E5CF',
-    // },
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'], // Add Poppins font
+      },
+    },
   },
   plugins: [],
 }

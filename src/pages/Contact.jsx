@@ -84,7 +84,6 @@ function Contact() {
               >
                 <div className="mt-2">karayamapebil building</div>
                 <div>mukkathikal street lane - 4</div>
-                <div>MG road</div>
                 <div>chembumukku, kakkand</div>
                 <div>Kochi, Kerala 680314</div>
               </a>

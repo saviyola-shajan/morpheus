@@ -34,31 +34,42 @@ function BehindTheScenes() {
 
   
   return (
-    <div>
-      <div className="mt-28 pr-16 ml-[650px] text-3xl font-semibold" style={{ color: isHovered ? '#F0E5CF' : '#F39C12' }}>
-        Behind The Scenes
-      </div>
-      <div
-        className="mt-2 pr ml-[560px] text-2xl font-medium"
-        style={{ color: isHovered ? '#F0E5CF' : '#fff' }}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        Crafting Visions from Concept to Screen.
-      </div>
-
-      <div className="grid grid-cols-3 gap-10 ml-16 mr-16 mt-20 mb-20">
-        {images.map((image) => (
-          <div
-            key={image.id}
-            className="p-2  bg-white bg-opacity-15 backdrop-blur-md"
-          >
-            <img src={image.src} alt={`Behind the scenes ${image.id}`} className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-105" />
-          </div>
-        ))}
-      </div>
+    <div className="px-4">
+    {/* Heading */}
+    <div
+className="mt-20 sm:mt-48 md:mt-40 lg:mt-28 text-center text-2xl md:text-3xl font-semibold"
+style={{ color: isHovered ? '#F0E5CF' : '#F39C12' }}
+    >
+      Behind The Scenes
     </div>
+  
+    {/* Subheading */}
+    <div
+      className="mt-2 text-center text-lg md:text-2xl font-medium"
+      style={{ color: isHovered ? '#F0E5CF' : '#fff' }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      Crafting Visions from Concept to Screen.
+    </div>
+  
+    {/* Images Section */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 mb-10 px-4 sm:px-8 md:px-16">
+      {images.map((image) => (
+        <div
+          key={image.id}
+          className="p-2 bg-white bg-opacity-15 backdrop-blur-md transition-transform duration-300 ease-in-out transform hover:scale-105"
+        >
+          <img
+            src={image.src}
+            alt={`Behind the scenes ${image.id}`}
+            className="w-full h-48 md:h-64 lg:h-80 object-cover"
+          />
+        </div>
+      ))}
+    </div>
+  </div>  
   );
-}
+}  
 
 export default BehindTheScenes;

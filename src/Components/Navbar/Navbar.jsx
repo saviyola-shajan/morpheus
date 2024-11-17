@@ -7,7 +7,7 @@ const Navbar = () => {
   const [selectedLink, setSelectedLink] = useState('/home');
   const navigate = useNavigate();
   const location = useLocation();
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     setSelectedLink(location.pathname);
@@ -22,90 +22,110 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const routes = [
+    { path: '/home', name: 'Home' },
+    { path: '/about', name: 'About' },
+    { path: '/adfilms', name: 'Ad Films' },
+    { path: '/behindthescenes', name: 'Behind the Scenes' },
+    { path: '/contact', name: 'Contact' },
+  ];
+
   return (
-    <nav className="text-white pt-6 flex items-center justify-between text-xl fixed top-0 w-full bg-black z-20">
+    <nav className="text-white font-medium  font-poppins pt-6 flex items-center justify-between text-2xl fixed top-0 w-full bg-black z-20">
+    {/* Logo Section */}
     <div
-        className="text-xl font-bold ml-32 pb-4 cursor-pointer"
-        onClick={() => handleLinkClick('/home')}
-        style={{color: isHovered?"#F39C12":"#F0E5CF"}}
-        onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      >
-        <div className="absolute left-24 right-40 border-b-2 border-red-600 bottom-0" ></div>
-        Morpheus Ads
-      </div>
-      <div className="md:hidden mr-8">
-        <button className="text-red-600 z-30" onClick={toggleMenu}>
-          {isOpen ? (
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
-          ) : (
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
-            </svg>
-          )}
-        </button>
-      </div>
-      <div className="hidden md:flex flex-1 justify-center space-x-16 pb-4">
-        {['/home', '/about', '/adfilms', '/behindthescenes', '/contact'].map((path) => (
-          <div
-            key={path}
-            className={`relative inline-block py-2 px-4 hover:text-red-600 cursor-pointer ${
-              selectedLink === path ? 'text-red-600' : 'text-white'
-            }`}
-            onClick={() => handleLinkClick(path)}
+      className="text-xl font-extrabold ml-8 md:ml-32 cursor-pointer flex items-center"
+      onClick={() => handleLinkClick('/home')}
+    >
+     <img
+  src="/morpheus-ads-1.png"
+  className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain"
+  alt="Logo"
+/>
+      {/* Red underline visible only on large devices */}
+      <div className="absolute left-24 right-40 border-b-2 border-red-600 bottom-0 hidden md:block"></div>
+    </div>
+
+    {/* Hamburger Menu for Mobile */}
+    <div className="md:hidden mr-4 sm:mr-8">
+      <button className="text-red-600 z-30" onClick={toggleMenu}>
+        {isOpen ? (
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            {path.substring(1).charAt(0).toUpperCase() + path.substring(2)}
-          </div>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        ) : (
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        )}
+      </button>
+    </div>
+
+    {/* Desktop Links */}
+    <div className="hidden md:flex flex-1 justify-center space-x-8 lg:space-x-16 pb-4">
+      {routes.map(({ path, name }) => (
+        <div
+          key={path}
+          className={`relative inline-block py-2 px-4 hover:text-red-600 cursor-pointer ${
+            selectedLink === path ? 'text-red-600' : 'text-white'
+          }`}
+          onClick={() => handleLinkClick(path)}
+        >
+          {name}
+          {selectedLink === path && (
+            <div className="absolute left-0 right-0 bottom-0 h-0.5"></div>
+          )}
+        </div>
+      ))}
+    </div>
+
+    {/* Mobile Menu */}
+    <motion.div
+      className={`md:hidden absolute top-16 right-0 text-white overflow-hidden z-20 bg-black w-full ${
+        isOpen ? 'block' : 'hidden'
+      }`}
+      initial={{ height: 0 }}
+      animate={{ height: isOpen ? 'auto' : 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      <ul className="flex flex-col items-center pb-10">
+        {routes.map(({ path, name }) => (
+          <li key={path} className="py-3">
+            <div
+              className={`hover:text-red-600 cursor-pointer ${
+                selectedLink === path ? 'text-red-600' : 'text-white'
+              }`}
+              onClick={() => handleLinkClick(path)}
+            >
+              {name}
+            </div>
+          </li>
         ))}
-      </div>
-      <motion.div
-        className={`md:hidden absolute top-16 right-0 text-white overflow-hidden z-20 ${
-          isOpen ? 'block' : 'hidden'
-        }`}
-        initial={{ height: 0 }}
-        animate={{ height: isOpen ? 'auto' : 0 }}
-        transition={{ duration: 0.3 }}
-      >
-        <ul className="flex flex-col items-center w-48 pb-10 bg-transparent">
-          {['/home', '/about', '/adfilms', '/behindthescenes', '/contact'].map((path) => (
-            <li key={path} className="py-3">
-              <div
-                className={`hover:text-red-600 cursor-pointer ${
-                  selectedLink === path ? 'text-red-600' : 'text-white'
-                }`}
-                onClick={() => handleLinkClick(path)}
-              >
-                {path.substring(1).charAt(0).toUpperCase() + path.substring(2)}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </motion.div>
-    </nav>
+      </ul>
+    </motion.div>
+  </nav>
   );
 };
 
