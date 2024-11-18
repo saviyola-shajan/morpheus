@@ -37,7 +37,7 @@ function BehindTheScenes() {
     <div className="px-4">
     {/* Heading */}
     <div
-className="mt-20 sm:mt-48 md:mt-40 lg:mt-28 text-center text-2xl md:text-3xl font-semibold"
+className="mt-26 sm:mt-56 md:mt-48 lg:mt-40 text-center text-2xl md:text-3xl font-semibold"
 style={{ color: isHovered ? '#F0E5CF' : '#F39C12' }}
     >
       Behind The Scenes

@@ -8,7 +8,7 @@ function AdFilm() {
     <div className="px-4 lg:px-16">
       {/* Heading */}
       <div
-        className="mt-28 text-center lg:text-centre text-xl sm:text-2xl md:text-3xl font-semibold"
+        className="mt-40 text-center lg:text-centre text-xl sm:text-2xl md:text-3xl font-semibold"
         style={{ color: isHovered ? '#F0E5CF' : '#F39C12' }}
       >
         Ad Films

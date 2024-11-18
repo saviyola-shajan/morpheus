@@ -17,7 +17,7 @@ const videoPlayer = () => {
 
     ]
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-20 py-16 mt-14">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-20 py-16 mt-28">
       {videos.map(video => (
         <div key={video.id} className="p-4 rounded-lg bg-white bg-opacity-15 backdrop-blur-md "
         >

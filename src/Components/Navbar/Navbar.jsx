@@ -37,11 +37,12 @@ const Navbar = () => {
       className="text-xl font-extrabold ml-8 md:ml-32 cursor-pointer flex items-center"
       onClick={() => handleLinkClick('/home')}
     >
-     <img
-  src="/morpheus-ads-1.png"
-  className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain"
-  alt="Logo"
+<img 
+  src="/morpheus-ads-1.png" 
+  className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 object-contain" 
+  alt="Logo" 
 />
+
       {/* Red underline visible only on large devices */}
       <div className="absolute left-24 right-40 border-b-2 border-red-600 bottom-0 hidden md:block"></div>
     </div>

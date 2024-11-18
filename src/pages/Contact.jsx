@@ -4,7 +4,7 @@ import Email from '../Components/Email/Email'
 function Contact() {
 
   return (
-    <div className="pt-20 flex items-center justify-center">
+    <div className="pt-20 flex items-center justify-center mt-16">
       <div className="text-white border-2 border-red-600 rounded-md my-12 mx-6 lg:mx-36 flex flex-col lg:flex-row">
         <div className="w-full lg:w-2/4 p-8 lg:pl-20">
           <div className="text-2xl lg:text-4xl lg:pl-16 lg:pt-10" style={{ color: '#F39C12' }}>Heyy....!</div>

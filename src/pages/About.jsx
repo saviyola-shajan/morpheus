@@ -1,6 +1,6 @@
 function About() {
   return (
-    <div className="bg text-white">
+    <div className="bg text-white mt-16">
       <div className="pt-24 flex flex-col lg:flex-row justify-between">
         {/* Left Section */}
         <div className="w-full lg:w-1/2 h-54 flex justify-center items-center ml-4 sm:ml-8 lg:ml-16 px-4 sm:px-6 lg:px-8 m-6 lg:m-10">
