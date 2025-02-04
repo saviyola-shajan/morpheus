@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import { lazy, Suspense } from 'react';
-
+import StickOnButtons from './Components/SctickOnButtons';
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const AdFilm = lazy(() => import('./pages/AdFilm'));
@@ -14,6 +14,7 @@ function App() {
     <>
       <Navbar />
       <Suspense fallback={<div style={{color:"white"}}>Loading...</div>}>
+      <StickOnButtons/>
         <Routes>
           <Route path='/home' element={<Home />} />
           <Route path='/about' element={<About />} />
